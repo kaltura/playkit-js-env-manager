@@ -1,0 +1,58 @@
+{
+  "playkit-js": {
+    "debug": {
+      "version": "latest",
+      "link": true,
+      "watch": true
+    },
+    "release": {}
+  },
+  "playkit-js-hls": {
+    "debug": {
+      "version": "latest",
+      "link": true,
+      "watch": false
+    },
+    "release": {}
+  },
+  "playkit-js-dash": {
+    "debug": {
+      "version": "latest",
+      "link": true,
+      "watch": false
+    },
+    "release": {}
+  },
+  "playkit-js-ima": {
+    "debug": {
+      "version": "latest",
+      "link": false,
+      "watch": false
+    },
+    "release": {}
+  },
+  "playkit-js-kanalytics": {
+    "debug": {
+      "version": "latest",
+      "link": false,
+      "watch": false
+    },
+    "release": {}
+  },
+  "playkit-js-ui": {
+    "debug": {
+      "version": "latest",
+      "link": false,
+      "watch": false
+    },
+    "release": {}
+  },
+  "playkit-js-providers": {
+    "debug": {
+      "version": "latest",
+      "link": false,
+      "watch": false
+    },
+    "release": {}
+  }
+}
