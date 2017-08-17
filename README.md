@@ -28,8 +28,7 @@ $ npm install
 $ npm link
 ```
 This will install the package scripts globally on your machine.
-#Quick Start
-## Commands
+# Commands
 Start dev mode:
 ```
 $ devStart
@@ -40,7 +39,7 @@ $ devStop
 ```
 Those commands will look at the ```devMode``` section of each repo configuration under ``` playkit-repos.json ```
 and will start/stop dev mode according to the configured values there.
-## Configuration
+# Configuration
 The default configuration define as:
 ```
 {
