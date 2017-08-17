@@ -1,9 +1,16 @@
 {
   "name": "playkit-js-env-manager",
   "version": "1.0.0",
+  "scripts": {
+    "release": "standard-version",
+    "publish": "git push --follow-tags --no-verify origin master"
+  },
   "bin": {
-    "start": "./lib/debug/start.js",
-    "stop": "./lib/debug/stop.js"
+    "devStart": "./lib/dev-mode/start.js",
+    "devStop": "./lib/dev-mode/stop.js"
+  },
+  "devDependencies": {
+    "standard-version": "^4.0.0"
   },
   "dependencies": {
     "chalk": "^2.1.0",

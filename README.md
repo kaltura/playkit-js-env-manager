@@ -1,13 +1,14 @@
-# PlayKit JS Env Manager - Command Line Helper Tool for Kaltura Player
+# PlayKit JS Env Manager - An environment manager to setup playkit-js-* projects across repos
 
 PlayKit JS Env Manager is a command line tool which aims to solve the development 
-challenge on local environment for multiple packages that 
-integrates to a single application. 
-In our case, the [Kaltura Player].
+challenges for multiple packages (playkit-js-*) that 
+integrates to a single application ([Kaltura Player] in our case).
 
 [Kaltura Player]: https://github.com/kaltura/kaltura-player-js
 
-## Install ttab 
+# Prerequisites
+
+### 1. Install ttab 
 First, install ttab globally on your machine: 
 ```
 $ [sudo] npm install ttab -g
@@ -16,106 +17,101 @@ Then, go to System Preferences > Security & Privacy, tab Privacy,
 select Accessibility, unlock, and make sure Terminal.app is in the list on the 
 right and has a checkmark.
 
-## Clone and install dependencies
+### 2. Clone and install dependencies
 ```
 $ git clone https://github.com/kaltura/playkit-js-env-manager.git
 $ cd playkit-js-env-manager
 $ npm install
 ```
-
-## Link 
+### 3. Link project
 ```
 $ npm link
 ```
-
+This will install the package scripts globally on your machine.
+#Quick Start
 ## Commands
-Start debugging:
+Start dev mode:
 ```
-$ start
+$ devStart
 ```
-Stop debugging:
+Stop dev mode:
 ```
-$ stop
+$ devStop
 ```
-Release version (WIP):
-```
-$ release
-```
-
+Those commands will look at the ```devMode``` section of each repo configuration under ``` playkit-repos.json ```
+and will start/stop dev mode according to the configured values there.
 ## Configuration
-The default configuration can be found under ``` repos.json ```:
+The default configuration define as:
 ```
 {
   "playkit-js": {
-    "debug": {
+    "devMode": {
       "version": "latest",
       "link": true,
       "watch": true
     },
-    "release": {}
+    "releaseMode": {}
   },
   "playkit-js-hls": {
-    "debug": {
+    "devMode": {
       "version": "latest",
       "link": true,
       "watch": false
     },
-    "release": {}
+    "releaseMode": {}
   },
   "playkit-js-dash": {
-    "debug": {
+    "devMode": {
       "version": "latest",
       "link": true,
       "watch": false
     },
-    "release": {}
+    "releaseMode": {}
   },
   "playkit-js-ima": {
-    "debug": {
+    "devMode": {
       "version": "latest",
       "link": false,
       "watch": false
     },
-    "release": {}
+    "releaseMode": {}
   },
   "playkit-js-kanalytics": {
-    "debug": {
+    "devMode": {
       "version": "latest",
       "link": false,
       "watch": false
     },
-    "release": {}
+    "releaseMode": {}
   },
   "playkit-js-ui": {
-    "debug": {
+    "devMode": {
       "version": "latest",
       "link": false,
       "watch": false
     },
-    "release": {}
+    "releaseMode": {}
   },
   "playkit-js-providers": {
-    "debug": {
+    "devMode": {
       "version": "latest",
       "link": false,
       "watch": false
     },
-    "release": {}
+    "releaseMode": {}
   }
 }
 ```
-### ``` start ```
-Since ``` start ``` command preparing the env to locally debug the Kaltura Player, the relevant section
- for that in each packagge is under ``` debug ``` .
-### Properties
-|              	| Type    	| Required                                       	| Description                                                                                                                                                                                	|
-|----------------------	|---------	|------------------------------------------------	|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|
-| ```version```            | ```string``` 	|                                                	| Specifies the package version that the corresponding repo will checkout to. For 'latest' it will checkout to the master branch.                                                                                                                                             	|
-| ``` link```             	| ```boolean``` 	|  	| Specifies whether this package should be linked, i.e, whether to pull the package bundle from the local machine or not. If set to false, the bundle will be taken from node_modules folder.                                                                                                                                 	|
-| ```watch```          	| ```boolean``` 	|   	| Specifies whether to watch the repo or not, i.e, whether to start webpack dev server to recompile the bundle in case of live code change.|
 
-### ``` release ```
-WIP
+## Properties
+### ``` devMode ```
+#### related commands: ``` devStart```, ``` devStop```
+
+|     Property         	| Type    	| Required                                       	| Description                                                                                                                                                                                	|
+|----------------------	|---------	|------------------------------------------------	|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|
+| ```version```            | ```string``` 	|                                                	| Specifies the package version that the corresponding repo will checkout to on the local machine. For 'latest' it will checkout to the master branch. **Relevant only if ```link``` is set to true. Otherwise, the repo version define in the package.json of kaltura-player-js will be loaded.**                                                                                                                                        	|
+| ``` link```             	| ```boolean``` 	|  	| Specifies whether this package should be linked, i.e, whether to pull the package bundle from the local machine or not. If set to false, the bundle will be taken from node_modules folder of kaltura-player-js.                                                                                                                                 	|
+| ```watch```          	| ```boolean``` 	|   	| Specifies whether to watch the repo or not, i.e, whether to start webpack dev server to recompile the bundle in case of live code changes. **Relevant only if ```link``` is set to true.**|
 
 ## Compatibility
 
