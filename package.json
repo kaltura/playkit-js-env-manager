@@ -3,12 +3,11 @@
   "version": "1.0.0",
   "scripts": {
     "release": "standard-version",
-    "publish": "git push --follow-tags --no-verify origin master"
+    "publish": "git push --follow-tags --no-verify origin master",
+    "devStart": "playkit-js-env-manager devMode start",
+    "devStop": "playkit-js-env-manager devMode stop"
   },
-  "bin": {
-    "devStart": "./lib/dev-mode/start.js",
-    "devStop": "./lib/dev-mode/stop.js"
-  },
+  "bin": "./lib/main.js",
   "devDependencies": {
     "standard-version": "^4.0.0"
   },

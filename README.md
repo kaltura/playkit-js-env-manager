@@ -27,6 +27,10 @@ $ npm install
 ```
 $ npm link
 ```
+
+### 4. Folder structure
+//TODO
+
 This will install the package scripts globally on your machine.
 # Commands
 Start dev mode:
@@ -106,11 +110,11 @@ The default configuration define as:
 ### ``` devMode ```
 #### related commands: ``` devStart```, ``` devStop```
 
-|     Property         	| Type    	| Required                                       	| Description                                                                                                                                                                                	|
-|----------------------	|---------	|------------------------------------------------	|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|
-| ```version```            | ```string``` 	|                                                	| Specifies the package version that the corresponding repo will checkout to on the local machine. For 'latest' it will checkout to the master branch. **Relevant only if ```link``` is set to true. Otherwise, the repo version define in the package.json of kaltura-player-js will be loaded.**                                                                                                                                        	|
-| ``` link```             	| ```boolean``` 	|  	| Specifies whether this package should be linked, i.e, whether to pull the package bundle from the local machine or not. If set to false, the bundle will be taken from node_modules folder of kaltura-player-js.                                                                                                                                 	|
-| ```watch```          	| ```boolean``` 	|   	| Specifies whether to watch the repo or not, i.e, whether to start webpack dev server to recompile the bundle in case of live code changes. **Relevant only if ```link``` is set to true.**|
+|     Property         	| Type    	| Possible Values| Description                                                                                                                                                                                	|
+|----------------------	|---------	|-------	|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|
+| ```version```         | ```string```|  ```'latest'```,```'local'```,```'vX.X.X'```   |Specifies the package version that the corresponding repo will checkout to on the local machine. For 'latest' it will checkout to the master branch. **Relevant only if ```link``` is set to true. Otherwise, the repo version define in the package.json of kaltura-player-js will be loaded.**                                                                                                                                        	|
+| ``` link```           | ```boolean```|  ```true```,```false```	|Specifies whether this package should be linked, i.e, whether to pull the package bundle from the local machine or not. If set to false, the bundle will be taken from node_modules folder of kaltura-player-js.                                                                                                                                 	|
+| ```watch```          	| ```boolean```|  ```true```,```false``` 	|Specifies whether to watch the repo or not, i.e, whether to start webpack dev server to recompile the bundle in case of live code changes. **Relevant only if ```link``` is set to true.**|
 
 ## Compatibility
 
