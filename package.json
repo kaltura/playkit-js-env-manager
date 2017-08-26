@@ -4,8 +4,8 @@
   "scripts": {
     "release": "standard-version",
     "publish": "git push --follow-tags --no-verify origin master",
-    "devStart": "playkit-js-env-manager devMode start",
-    "devStop": "playkit-js-env-manager devMode stop"
+    "devStart": "playkit devMode start",
+    "devStop": "playkit devMode stop"
   },
   "bin": {
     "playkit": "./lib/main.js"
