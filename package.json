@@ -7,7 +7,9 @@
     "devStart": "playkit-js-env-manager devMode start",
     "devStop": "playkit-js-env-manager devMode stop"
   },
-  "bin": "./lib/main.js",
+  "bin": {
+    "playkit": "./lib/main.js"
+  },
   "devDependencies": {
     "standard-version": "^4.0.0"
   },
