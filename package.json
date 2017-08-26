@@ -8,7 +8,8 @@
     "devStop": "playkit devMode stop"
   },
   "bin": {
-    "playkit": "./lib/main.js"
+    "playkit-dev": "./lib/dev-mode/index.js",
+    "playkit-rel": "./lib/release-mode/index.js"
   },
   "devDependencies": {
     "standard-version": "^4.0.0"
