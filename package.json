@@ -4,8 +4,9 @@
   "scripts": {
     "release": "standard-version",
     "publish": "git push --follow-tags --no-verify origin master",
-    "devStart": "playkit devMode start",
-    "devStop": "playkit devMode stop"
+    "devStart": "playkit-dev start",
+    "devStop": "playkit-dev stop",
+    "relStart": "playkit-rel go"
   },
   "bin": {
     "playkit-dev": "./lib/dev-mode/index.js",
@@ -17,6 +18,8 @@
   "dependencies": {
     "chalk": "^2.1.0",
     "fs": "0.0.1-security",
+    "json-parser": "^1.1.5",
+    "prompt": "^1.0.0",
     "shelljs": "^0.7.8"
   },
   "repository": {

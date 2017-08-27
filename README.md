@@ -33,14 +33,39 @@ $ npm link
 
 This will install the package scripts globally on your machine.
 # Commands
-Start dev mode:
+
+### playkit-dev start <OPT_CONFIG_FILE_PATH.json>
+
+##### Starts the dev mode.
+
+Examples:
 ```
-$ devStart
+$ playkit-dev start 
 ```
-Stop dev mode:
+Config file will be taken from playkit-js-env-manager/lib/playkit-repos.json
 ```
-$ devStop
+$ playkit-dev start /Users/MY_USER/config.json
 ```
+Config file will be taken from /Users/MY_USER/config.json
+
+### playkit-dev stop <OPT_CONFIG_FILE_PATH.json>
+
+##### Stops the dev mode.
+
+Examples:
+```
+$ playkit-dev stop 
+```
+Config file will be taken from playkit-js-env-manager/lib/playkit-repos.json
+```
+$ playkit-dev stop /Users/MY_USER/config.json
+```
+Config file will be taken from /Users/MY_USER/config.json
+
+
+
+
+
 Those commands will look at the ```devMode``` section of each repo configuration under ``` playkit-repos.json ```
 and will start/stop dev mode according to the configured values there.
 # Configuration
