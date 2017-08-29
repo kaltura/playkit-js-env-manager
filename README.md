@@ -137,6 +137,34 @@ and will start release mode according to the configured values there.
 |----------------------	|---------	|-------	|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|
 | ```skip```          	| ```boolean```|  ```true```,```false``` 	|Specifies whether to skip the repo while releasing a version. 
 
+## Flows
+**Dev mode flow:**
+* for each playkit-js-* repo, do:
+  * clean dist
+  * unlink repo
+  * if repo is configured as link, check version:
+    * if latest:
+      * do nothing
+    * else:
+      * stash changes
+      * if latest:
+        * checkout origin master
+        * pull origin master
+      * if version: 
+        * check tags
+        * checkout to the configured tag
+    * build repo
+    * link repo
+    * if repo is configured as watch:
+      * start dev server 
+* for kaltura-player-js repo, do:
+  * for each playkit-js-* repo:
+    * if repo is configured as link:
+      * link repo in kaltura-player-js
+  * start dev server
+
+
+
 ## Compatibility
 
 This tool has been tested only on Mac OS.
