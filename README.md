@@ -164,7 +164,17 @@ and will start release mode according to the configured values there.
   * start dev server
 
 **Dev mode stop - flow:**
-
+* for each playkit-js-* repo, do:
+  * if repo is configured as link:
+    * clean dist
+    * unlink repo
+* for kaltura-player-js repo, do:
+  * for each playkit-js-* repo in package.json dependencies:
+    * if repo is configured as link:
+      * unlink repo
+      * add repo
+  * build
+  
 ## Compatibility
 
 This tool has been tested only on Mac OS.
