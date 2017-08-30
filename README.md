@@ -138,7 +138,7 @@ and will start release mode according to the configured values there.
 | ```skip```          	| ```boolean```|  ```true```,```false``` 	|Specifies whether to skip the repo while releasing a version. 
 
 ## Flows
-**Dev mode flow:**
+**Dev mode start - flow:**
 * for each playkit-js-* repo, do:
   * clean dist
   * unlink repo
@@ -163,7 +163,7 @@ and will start release mode according to the configured values there.
       * link repo in kaltura-player-js
   * start dev server
 
-
+**Dev mode stop - flow:**
 
 ## Compatibility
 
