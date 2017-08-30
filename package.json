@@ -19,7 +19,6 @@
     "chalk": "^2.1.0",
     "fs": "0.0.1-security",
     "json-parser": "^1.1.5",
-    "octonode": "^0.8.0",
     "prompt": "^1.0.0",
     "shelljs": "^0.7.8"
   },
