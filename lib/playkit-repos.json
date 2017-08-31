@@ -76,7 +76,7 @@
       "watch": false
     },
     "releaseMode": {
-      "skip": false
+      "skip": true
     }
   }
 }
