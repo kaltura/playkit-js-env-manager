@@ -1,0 +1,34 @@
+{
+  "core": {
+    "name": "playkit-js",
+    "url": "https://github.com/kaltura/playkit-js.git"
+  },
+  "dash": {
+    "name": "playkit-js-dash",
+    "url": "https://github.com/kaltura/playkit-js-dash.git"
+  },
+  "hls": {
+    "name": "playkit-js-hls",
+    "url": "https://github.com/kaltura/playkit-js-hls.git"
+  },
+  "ima": {
+    "name": "playkit-js-ima",
+    "url": "https://github.com/kaltura/playkit-js-ima.git"
+  },
+  "ui": {
+    "name": "playkit-js-ui",
+    "url": "https://github.com/kaltura/playkit-js-ui.git"
+  },
+  "providers": {
+    "name": "playkit-js-providers",
+    "url": "https://github.com/kaltura/playkit-js-providers.git"
+  },
+  "youbora": {
+    "name": "playkit-js-youbora",
+    "url": "https://github.com/kaltura/playkit-js-youbora.git"
+  },
+  "kanalyitcs": {
+    "name": "playkit-js-kanalyitcs",
+    "url": "https://github.com/kaltura/playkit-js-kanalyitcs.git"
+  }
+}
