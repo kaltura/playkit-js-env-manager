@@ -59,9 +59,9 @@
       "core"
     ]
   },
-  "kanalyitcs": {
-    "name": "playkit-js-kanalyitcs",
-    "url": "https://github.com/kaltura/playkit-js-kanalyitcs.git",
+  "kanalytics": {
+    "name": "playkit-js-kanalytics",
+    "url": "https://github.com/kaltura/playkit-js-kanalytics.git",
     "peerDependencies": [
       "core",
       "providers"
