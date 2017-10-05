@@ -1,34 +1,74 @@
 {
   "core": {
     "name": "playkit-js",
-    "url": "https://github.com/kaltura/playkit-js.git"
+    "url": "https://github.com/kaltura/playkit-js.git",
+    "peerDependencies": [],
+    "devDependencies": []
   },
   "dash": {
     "name": "playkit-js-dash",
-    "url": "https://github.com/kaltura/playkit-js-dash.git"
+    "url": "https://github.com/kaltura/playkit-js-dash.git",
+    "peerDependencies": [
+      "core"
+    ],
+    "devDependencies": [
+      "core"
+    ]
   },
   "hls": {
     "name": "playkit-js-hls",
-    "url": "https://github.com/kaltura/playkit-js-hls.git"
+    "url": "https://github.com/kaltura/playkit-js-hls.git",
+    "peerDependencies": [
+      "core"
+    ],
+    "devDependencies": [
+      "core"
+    ]
   },
   "ima": {
     "name": "playkit-js-ima",
-    "url": "https://github.com/kaltura/playkit-js-ima.git"
+    "url": "https://github.com/kaltura/playkit-js-ima.git",
+    "peerDependencies": [
+      "core"
+    ],
+    "devDependencies": [
+      "core"
+    ]
   },
   "ui": {
     "name": "playkit-js-ui",
-    "url": "https://github.com/kaltura/playkit-js-ui.git"
+    "url": "https://github.com/kaltura/playkit-js-ui.git",
+    "peerDependencies": [],
+    "devDependencies": [
+      "core"
+    ]
   },
   "providers": {
     "name": "playkit-js-providers",
-    "url": "https://github.com/kaltura/playkit-js-providers.git"
+    "url": "https://github.com/kaltura/playkit-js-providers.git",
+    "peerDependencies": [],
+    "devDependencies": []
   },
   "youbora": {
     "name": "playkit-js-youbora",
-    "url": "https://github.com/kaltura/playkit-js-youbora.git"
+    "url": "https://github.com/kaltura/playkit-js-youbora.git",
+    "peerDependencies": [
+      "core"
+    ],
+    "devDependencies": [
+      "core"
+    ]
   },
   "kanalyitcs": {
     "name": "playkit-js-kanalyitcs",
-    "url": "https://github.com/kaltura/playkit-js-kanalyitcs.git"
+    "url": "https://github.com/kaltura/playkit-js-kanalyitcs.git",
+    "peerDependencies": [
+      "core",
+      "providers"
+    ],
+    "devDependencies": [
+      "core",
+      "providers"
+    ]
   }
 }
