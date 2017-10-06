@@ -43,9 +43,13 @@ An example for a valid folder structure is:
 * Go to _package.json_ file in _kaltura-player-js_ project.
 * Observe under `scripts` the following commands:
 ````
-"playkit-dev:start": "playkit-dev start",
-"playkit-dev:stop": "playkit-dev stop",
-"playkit-rel": "playkit-rel start"
+"scripts": {
+  ....
+  "playkit-dev:start": "playkit-dev start",
+  "playkit-dev:stop": "playkit-dev stop",
+  "playkit-rel": "playkit-rel start"
+  ...
+}
 ````
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Those commands will helps us to run the required modes.
 * Observe new entry named `envManager` which contains the following configuration:
@@ -58,7 +62,7 @@ An example for a valid folder structure is:
 ```
 * To run a certain script, simply open your terminal, go to kaltura-player-js project:
 ```
-$ cd kaltura-player-js
+$ cd PATH/TO/kaltura-player-js
 ```
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;and run one of:
   ```
@@ -67,7 +71,7 @@ $ cd kaltura-player-js
   yarn run playkit-dev:stop
   ```
 ## Aliases for playkit repos
-Each repo has an alias to shorten its name and thus change the configuration more easily and quickly:
+Each repo has an alias to shorten its name and thus manipulate the configuration more easily and quickly:
 * _playkit-js -> **core**_
 * _playkit-js-ui -> **ui**_
 * _playkit-js-ima -> **ima**_
@@ -75,7 +79,7 @@ Each repo has an alias to shorten its name and thus change the configuration mor
 * _playkit-js-dash -> **dash**_
 * _playkit-js-providers -> **providers**_
 * _playkit-js-youbora -> **youbora**_
-* _playkit-js-kanalytics -> k**analytics**_
+* _playkit-js-kanalytics -> **kanalytics**_
 
 # Configuration 
 
