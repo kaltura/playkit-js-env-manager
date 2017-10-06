@@ -17,19 +17,14 @@ Then, go to System Preferences > Security & Privacy, tab Privacy,
 select Accessibility, unlock, and make sure Terminal.app is in the list on the 
 right and has a checkmark.
 
-### 2. Clone and install dependencies
+### 2. Clone _kaltura-player-js_ repository
 ```
-$ git clone https://github.com/kaltura/playkit-js-env-manager.git
-$ cd playkit-js-env-manager
-$ npm install
+$ git clone https://github.com/kaltura/kaltura-player-js.git
+$ cd kaltura-player-js
+$ yarn
 ```
-### 3. Link project
-```
-$ npm link
-```
-This will install the package scripts globally on your machine.
 
-### 4. Folder structure
+### 3. Folder structure
 Pay attention that all playkit-js-* repos including kaltura-player-js repo must be under the same parent directory.
 An example for a valid folder structure is:
 ```
@@ -44,137 +39,103 @@ An example for a valid folder structure is:
   - playkit-js-kanalytics
   - kaltura-player-js
 ```
+# Quick Start
+* Go to _package.json_ file in _kaltura-player-js_ project.
+* Observe under `scripts` the following commands:
+````
+"scripts": {
+  ....
+  "playkit-dev:start": "playkit-dev start",
+  "playkit-dev:stop": "playkit-dev stop",
+  "playkit-rel": "playkit-rel start"
+  ...
+}
+````
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Those commands will helps us to run the required modes.
+* Observe new entry named `envManager` which contains the following configuration:
 
-
-# playkit-dev 
-
-## Commands
-
-### playkit-dev start <OPT_CONFIG_FILE_PATH.json>
-
-##### Starts the dev mode.
-
-Examples:
 ```
-$ playkit-dev start 
+  "envManager": {
+    "devMode": {},
+    "releaseMode": []
+  }
 ```
-Config file will be taken from playkit-js-env-manager/lib/playkit-repos.json
+* To run a certain script, simply open your terminal, go to kaltura-player-js project:
 ```
-$ playkit-dev start /Users/MY_USER/config.json
+$ cd PATH/TO/kaltura-player-js
 ```
-Config file will be taken from /Users/MY_USER/config.json
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;and run one of:
+  ```
+  yarn run playkit-rel
+  yarn run playkit-dev:start
+  yarn run playkit-dev:stop
+  ```
+## Aliases for playkit repos
+Each repo has an alias to shorten its name and thus manipulate the configuration more easily and quickly:
+* _playkit-js -> **core**_
+* _playkit-js-ui -> **ui**_
+* _playkit-js-ima -> **ima**_
+* _playkit-js-hls -> **hls**_
+* _playkit-js-dash -> **dash**_
+* _playkit-js-providers -> **providers**_
+* _playkit-js-youbora -> **youbora**_
+* _playkit-js-kanalytics -> **kanalytics**_
 
-### playkit-dev stop <OPT_CONFIG_FILE_PATH.json>
+# Configuration 
 
-##### Stops the dev mode.
+## devMode
 
-Examples:
-```
-$ playkit-dev stop 
-```
-Config file will be taken from playkit-js-env-manager/lib/playkit-repos.json
-```
-$ playkit-dev stop /Users/MY_USER/config.json
-```
-Config file will be taken from /Users/MY_USER/config.json
+### commands
+* **playkit-dev:start**
+* **playkit-dev:stop**
 
-
-## Configuration
 
 ### Structure
 ```
-"playkit-js-*" : {
-  "devMode" : {
-    "link" : boolean,
-    "version" : string,
-    "watch" : boolean
+  "devMode": {
+    "alias": "version",
+    ...
   }
-}
 ```
-The above commands will look at the ```devMode``` section of each repo configuration under ``` playkit-repos.json (or OPT_CONFIG_FILE_PATH.json if provided) ```
-and will start/stop dev mode according to the configured values there.
-
-### Properties
 
 |     Property         	| Type    	| Possible Values| Description                                                                                                                                                                                	|
 |----------------------	|---------	|-------	|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|
-| ``` link```           | ```boolean```|  ```true```,```false```	|Specifies whether this package should be linked, i.e, whether to pull the package bundle from the local machine or not. If set to ``` false``` , the bundle will be taken from ``` node_modules```  folder of ``` kaltura-player-js``` repo.                                                                                                                                 	|
-| ```version```         | ```string```|  ```'latest'```,```'local'```,```'vX.X.X'```   |Specifies the package version that the corresponding repo will checkout to on the local machine. For 'latest' it will checkout to the master branch. For 'local' it will stay on the current local branch (whatever that is). **Relevant only if ```link``` is set to true. Otherwise, the repo version defined in the ```package.json``` file of ```kaltura-player-js``` repo will be loaded.**                                                                                                                                        	|
-| ```watch```          	| ```boolean```|  ```true```,```false``` 	|Specifies whether to watch the repo or not, i.e, whether to start webpack dev server to recompile the bundle in case of live code changes. **Relevant only if ```link``` is set to true.**|
+| ```version```         | ```string```|  ```'latest'```,```'local'```,```'vX.X.X'```   |Specifies the package version that the corresponding repo will checkout to on the local machine. For 'latest' it will checkout to the master branch. For 'local' it will stay on the current local branch (whatever that is).                                                                                                                                         	|
 
-# playkit-rel 
 
-### playkit-rel start <OPT_CONFIG_FILE_PATH.json>
-
-##### Starts the release mode.
-
-Examples:
+### Example:
 ```
-$ playkit-rel start 
+  "devMode": {
+    "core": "v0.10.0",
+    "ui": "latest",
+    "hls": "local"
+  }
 ```
-Config file will be taken from playkit-js-env-manager/lib/playkit-repos.json
-```
-$ playkit-rel start /Users/MY_USER/config.json
-```
-Config file will be taken from /Users/MY_USER/config.json
 
-## Configuration
+## releaseMode
+
+### commands
+* **playkit-rel**
 
 ### Structure
 ```
-"playkit-js-*" : {
-  "releaseMode" : {
-    "skip" : boolean
+  "releaseMode": [
+    "alias1",
+    "alias2",
+    "alias3",
+    ...
   }
-}
+ ```
+### Example:
 ```
-The above command will look at the ```releaseMode``` section of each repo configuration under ``` playkit-repos.json (or OPT_CONFIG_FILE_PATH.json if provided) ```
-and will start release mode according to the configured values there.
-
-### Properties
-
-|     Property         	| Type    	| Possible Values| Description                                                                                                                                                                                	|
-|----------------------	|---------	|-------	|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|
-| ```skip```          	| ```boolean```|  ```true```,```false``` 	|Specifies whether to skip the repo while releasing a version. 
-
-## Flows
-**Dev mode start - flow:**
-* for each playkit-js-* repo, do:
-  * clean dist
-  * unlink repo
-  * if repo is configured as link, check version:
-    * if latest:
-      * do nothing
-    * else:
-      * stash changes
-      * if latest:
-        * checkout origin master
-        * pull origin master
-      * if version: 
-        * check tags
-        * checkout to the configured tag
-    * build repo
-    * link repo
-    * if repo is configured as watch:
-      * start dev server 
-* for kaltura-player-js repo, do:
-  * for each playkit-js-* repo:
-    * if repo is configured as link:
-      * link repo in kaltura-player-js
-  * start dev server
-
-**Dev mode stop - flow:**
-* for each playkit-js-* repo, do:
-  * if repo is configured as link:
-    * clean dist
-    * unlink repo
-* for kaltura-player-js repo, do:
-  * for each playkit-js-* repo in package.json dependencies:
-    * if repo is configured as link:
-      * unlink repo
-      * add repo
-  * build
-  
+  "releaseMode": [
+    "core",
+    "youbora",
+    "hls",
+    ...
+  }
+ ``` 
+ 
 ## Compatibility
 
 This tool has been tested only on Mac OS.
