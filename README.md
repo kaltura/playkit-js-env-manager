@@ -85,7 +85,7 @@ Each repo has an alias to shorten its name and thus manipulate the configuration
 
 ## devMode
 
-### commands
+### Commands
 * **playkit-dev:start**
 * **playkit-dev:stop**
 
@@ -114,7 +114,7 @@ Each repo has an alias to shorten its name and thus manipulate the configuration
 
 ## releaseMode
 
-### commands
+### Commands
 * **playkit-rel**
 
 ### Structure
@@ -124,7 +124,7 @@ Each repo has an alias to shorten its name and thus manipulate the configuration
     "alias2",
     "alias3",
     ...
-  }
+  ]
  ```
 ### Example:
 ```
@@ -133,7 +133,7 @@ Each repo has an alias to shorten its name and thus manipulate the configuration
     "youbora",
     "hls",
     ...
-  }
+  ]
  ``` 
  
 ## Compatibility
