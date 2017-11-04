@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="3.1.0"></a>
+# [3.1.0](https://github.com/kaltura/playkit-js-env-manger/compare/v3.0.1...v3.1.0) (2017-11-04)
+
+
+### Bug Fixes
+
+* link included repos last ([#6](https://github.com/kaltura/playkit-js-env-manger/issues/6)) ([91edcb9](https://github.com/kaltura/playkit-js-env-manger/commit/91edcb9))
+
+
+### Features
+
+* add branch option ([#5](https://github.com/kaltura/playkit-js-env-manger/issues/5)) ([eb5bc4d](https://github.com/kaltura/playkit-js-env-manger/commit/eb5bc4d))
+* create release notes with github api ([#4](https://github.com/kaltura/playkit-js-env-manger/issues/4)) ([163a54e](https://github.com/kaltura/playkit-js-env-manger/commit/163a54e))
+
+
+
 <a name="3.0.1"></a>
 ## [3.0.1](https://github.com/kaltura/playkit-js-env-manger/compare/v3.0.0...v3.0.1) (2017-10-28)
 
