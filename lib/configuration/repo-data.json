@@ -70,5 +70,17 @@
       "core",
       "providers"
     ]
+  },
+  "ott-analytics": {
+    "name": "playkit-js-ott-analytics",
+    "url": "https://github.com/kaltura/playkit-js-ott-analytics.git",
+    "peerDependencies": [
+      "core",
+      "providers"
+    ],
+    "devDependencies": [
+      "core",
+      "providers"
+    ]
   }
 }
