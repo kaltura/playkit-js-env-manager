@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="3.2.0"></a>
+# [3.2.0](https://github.com/kaltura/playkit-js-env-manger/compare/v3.1.2...v3.2.0) (2018-01-28)
+
+
+### Features
+
+* add ott support ([#11](https://github.com/kaltura/playkit-js-env-manger/issues/11)) ([1b937c0](https://github.com/kaltura/playkit-js-env-manger/commit/1b937c0))
+
+
+
 <a name="3.1.2"></a>
 ## [3.1.2](https://github.com/kaltura/playkit-js-env-manger/compare/v3.1.1...v3.1.2) (2017-11-29)
 
