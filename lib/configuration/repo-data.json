@@ -3,7 +3,8 @@
     "name": "playkit-js",
     "url": "https://github.com/kaltura/playkit-js.git",
     "peerDependencies": [],
-    "devDependencies": []
+    "devDependencies": [],
+    "usingBundleBuilder": false
   },
   "dash": {
     "name": "playkit-js-dash",
@@ -13,7 +14,8 @@
     ],
     "devDependencies": [
       "core"
-    ]
+    ],
+    "usingBundleBuilder": false
   },
   "hls": {
     "name": "playkit-js-hls",
@@ -23,7 +25,8 @@
     ],
     "devDependencies": [
       "core"
-    ]
+    ],
+    "usingBundleBuilder": false
   },
   "ima": {
     "name": "playkit-js-ima",
@@ -33,7 +36,8 @@
     ],
     "devDependencies": [
       "core"
-    ]
+    ],
+    "usingBundleBuilder": false
   },
   "ui": {
     "name": "playkit-js-ui",
@@ -41,13 +45,15 @@
     "peerDependencies": [],
     "devDependencies": [
       "core"
-    ]
+    ],
+    "usingBundleBuilder": false
   },
   "providers": {
     "name": "playkit-js-providers",
     "url": "https://github.com/kaltura/playkit-js-providers.git",
     "peerDependencies": [],
-    "devDependencies": []
+    "devDependencies": [],
+    "usingBundleBuilder": false
   },
   "youbora": {
     "name": "playkit-js-youbora",
@@ -57,7 +63,8 @@
     ],
     "devDependencies": [
       "core"
-    ]
+    ],
+    "usingBundleBuilder": false
   },
   "kanalytics": {
     "name": "playkit-js-kanalytics",
@@ -69,7 +76,8 @@
     "devDependencies": [
       "core",
       "providers"
-    ]
+    ],
+    "usingBundleBuilder": false
   },
   "ott-analytics": {
     "name": "playkit-js-ott-analytics",
@@ -81,6 +89,18 @@
     "devDependencies": [
       "core",
       "providers"
-    ]
+    ],
+    "usingBundleBuilder": false
+  },
+  "google-analytics": {
+    "name": "playkit-js-google-analytics",
+    "url": "https://github.com/kaltura/playkit-js-google-analytics.git",
+    "peerDependencies": [
+      "core"
+    ],
+    "devDependencies": [
+      "core"
+    ],
+    "usingBundleBuilder": true
   }
 }
