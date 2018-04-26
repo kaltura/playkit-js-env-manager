@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="3.3.0"></a>
+# [3.3.0](https://github.com/kaltura/playkit-js-env-manger/compare/v3.2.0...v3.3.0) (2018-04-26)
+
+
+### Features
+
+* add google-analytics and bundle builder handling ([d88460e](https://github.com/kaltura/playkit-js-env-manger/commit/d88460e))
+
+
+
 <a name="3.2.0"></a>
 # [3.2.0](https://github.com/kaltura/playkit-js-env-manger/compare/v3.1.2...v3.2.0) (2018-01-28)
 
