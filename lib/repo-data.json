@@ -123,6 +123,17 @@
     "devDependencies": [
       "core"
     ],
+    "usingBundleBuilder": false
+  },
+  "vr": {
+    "name": "playkit-js-vr",
+    "url": "https://github.com/kaltura/playkit-js-vr.git",
+    "peerDependencies": [
+      "core"
+    ],
+    "devDependencies": [
+      "core"
+    ],
     "usingBundleBuilder": true
   }
 }

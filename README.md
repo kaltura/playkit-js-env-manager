@@ -1,20 +1,20 @@
 # PlayKit JS Env Manager - An environment manager to setup playkit-js-* projects across repos
 
-PlayKit JS Env Manager is a command line tool which aims to solve the development 
-challenges for multiple packages (playkit-js-*) that 
+PlayKit JS Env Manager is a command line tool which aims to solve the development
+challenges for multiple packages (playkit-js-*) that
 integrates to a single application ([Kaltura Player] in our case).
 
 [Kaltura Player]: https://github.com/kaltura/kaltura-player-js
 
 # Prerequisites
 
-### 1. Install ttab 
-First, install ttab globally on your machine: 
+### 1. Install ttab
+First, install ttab globally on your machine:
 ```
 $ [sudo] npm install ttab -g
 ```
-Then, go to System Preferences > Security & Privacy, tab Privacy, 
-select Accessibility, unlock, and make sure Terminal.app is in the list on the 
+Then, go to System Preferences > Security & Privacy, tab Privacy,
+select Accessibility, unlock, and make sure Terminal.app is in the list on the
 right and has a checkmark.
 
 ### 2. Clone _kaltura-player-js_ repository
@@ -80,8 +80,13 @@ Each repo has an alias to shorten its name and thus manipulate the configuration
 * _playkit-js-providers -> **providers**_
 * _playkit-js-youbora -> **youbora**_
 * _playkit-js-kanalytics -> **kanalytics**_
+* _playkit-js-ott-analytics -> **ott-analytics**_
+* _playkit-js-google-analytics -> **google-analytics**_
+* _playkit-js-comscore -> **comscore**_
+* _playkit-js-kava -> **kava**_
+* _playkit-js-vr -> **vr**_
 
-# Configuration 
+# Configuration
 
 ## devMode
 
@@ -134,8 +139,8 @@ Each repo has an alias to shorten its name and thus manipulate the configuration
     "hls",
     ...
   ]
- ``` 
- 
+ ```
+
 ## Compatibility
 
 This tool has been tested only on Mac OS.
@@ -146,7 +151,7 @@ Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c6
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/kaltura/playkit-js-ima/tags). 
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/kaltura/playkit-js-ima/tags).
 
 ## License
 
